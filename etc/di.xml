@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!-- 
+- @package Enhance_SalesRule
+- @version 1.0.0
+- @category magento-module
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\SalesRule\Model\Utility" type="Enhance\SalesRule\Rewrite\Magento\SalesRule\Model\Utility"/>
+	<type name="Magento\SalesRule\Model\Rule\Metadata\ValueProvider">
+        <plugin name="salesrule-enhance-salesRule" type="Enhance\SalesRule\Plugin\Rule\Metadata\ValueProvider" sortOrder="1" />
+    </type>
+	<type name="Magento\SalesRule\Model\Rule\Action\Discount\CalculatorFactory">
+        <arguments>
+            <argument name="discountRules" xsi:type="array">
+                <item name="add_free_product_to_cart" xsi:type="string">\Enhance\SalesRule\Model\Rule\Action\Discount\AddProduct</item>
+            </argument>
+        </arguments>
+     </type>
+</config>

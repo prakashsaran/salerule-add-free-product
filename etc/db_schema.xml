@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!-- 
+- @package Enhance_SalesRule
+- @version 1.0.0
+- @category magento-module
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="salesrule" resource="default" engine="innodb" comment="enhance_salesrule_salesrule Table">
+		<column name="apply_on_reorder" xsi:type="smallint" padding="6" unsigned="false" nullable="false" identity="false"
+            default="0" comment="Apply discount on all subscription runs"/>
+		<column name="product_sku" nullable="true" xsi:type="varchar" comment="Product Sku" length="64"/>
+	</table>
+	<table name="quote">
+		<column xsi:type="int" name="parent_id" padding="10" unsigned="true" nullable="true" identity="false" comment="Parent Quote ID"/>
+		<column name="free_products" nullable="true" xsi:type="varchar" comment="free_skus" length="255"/>
+	</table>
+</schema>

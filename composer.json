@@ -1,0 +1,22 @@
+{
+    "name": "enhance/module-salesr	ule",
+    "description": "Add Free Product to cart by cart Price rule",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Prakash",
+            "email": "info@nodomain.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Enhance\\SalesRule\\": ""
+        }
+    }
+}

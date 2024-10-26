@@ -1,0 +1,38 @@
+<?php
+/**
+ * @package Enhance_SalesRule
+ * @version 1.0.0
+ * @category magento-module
+ */
+?>
+<script>
+require([
+    'jquery',
+    "uiRegistry",
+    'Magento_Ui/js/modal/alert',
+    'prototype'
+], function(jQuery, registry, alert) {
+
+//<![CDATA[
+    jQuery(document).on("click", "[name=apply_on_reorder]", function(e){
+        var targElmt = jQuery("[name=is_stackable_coupon]");
+        if (jQuery(this).is(":checked")) {
+            targElmt.prop('checked', false);
+        } else {
+            targElmt.prop('checked', false);
+        }
+        targElmt.val(0);
+        targElmt.trigger("change");
+    })
+    jQuery(document).on("click", "[name=is_stackable_coupon]", function(e){
+        var targElmt = jQuery("[name=apply_on_reorder]");
+        if (jQuery(this).is(":checked")) {
+            targElmt.prop('checked', false);
+        } else {
+           targElmt.prop('checked', false);
+        }
+        targElmt.val(0);
+        targElmt.trigger("change");
+    })
+});
+</script>

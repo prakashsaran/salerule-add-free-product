@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!-- 
+- @package Enhance_SalesRule
+- @version 1.0.0
+- @category magento-module
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="paradoxlabs_subscription_collect_totals_before">
+		<observer name="enhance_salesrule_observer_paradoxlabs_subscription_collect_totals_before" instance="Enhance\SalesRule\Observer\Paradoxlabs\SubscriptionCollectTotalsBefore"/>
+	</event>
+	<event name="sales_quote_save_after">
+		<observer name="enhance_salesrule_observer_sales_quoteaddresscollecttotalsafter_sales_quote_address_collect_totals_after" instance="Enhance\SalesRule\Observer\Sales\QuoteAddressCollectTotalsAfter"/>
+	</event>
+</config>
